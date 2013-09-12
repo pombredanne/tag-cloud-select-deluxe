@@ -1,0 +1,92 @@
+/* hypster-one theme by Amirouche Boubekki (hypermove.net) released under cc-by-nc-sa */
+
+@import url(normalize.css);
+@import url(highlighting.css);
+
+@font-face {
+  font-family: DroidSerif;
+  src: url(DroidSerif.ttf);
+}
+
+@font-face {
+  font-family: LeagueGothic;
+  src: url(LeagueGothic-Regular.otf);
+}
+
+@font-face {
+  font-family: Cursor;
+  src: url(texgyrecursor-regular.otf);
+}
+
+
+body {
+  color: #3C3C3C;
+  margin: 0px;
+  background: url("background.png");
+  font-family: DroidSerif, Georgia, serif;
+  line-height: 2em;
+  width: 700px;
+  margin: 0px auto;
+  font-size: 1.1em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: LeagueGothic, 'Liberation Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  font-weight: normal;
+}
+
+#title {
+    font-size: 5em;
+}
+
+#title a {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+    color: blue;
+    transition: 1s;
+}
+
+a:hover {
+    color: black;
+}
+
+p {
+    text-align: justify;
+}
+
+p + p {
+  text-indent: 1.5em;
+}
+
+div.highlight {
+    padding: 10px;
+    background-color: rgb(240, 243, 243);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+pre {
+    font-family: Cursor, "Bitstream Vera Sans Mono", monospace;
+    line-height: 1em;
+    font-size: 0.8em;
+}
+
+#footer {
+    font-size: 0.7em;
+    padding: 10px;
+    opacity: 0.3;
+    transition: 700ms;
+}
+
+#footer p {
+    margin: 0px;
+}
+
+#footer:hover {
+    opacity: 1;
+}
