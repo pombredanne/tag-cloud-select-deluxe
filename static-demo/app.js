@@ -32,18 +32,17 @@ var tagselect = function(options) {
     var newtag = $('<li class="add-tag">New tag</li>');
     var newtag_on_click = function() {
 	$(this).remove()
-	var newinput = $('<input type="text"/>');
-	newinput.keypress(function(event) {
-	    if (event.key == 'Enter') {
-		var tag = newinput.val();
-		newinput.remove();
-		tag = $('<li>' + tag + '</li>');
-		tag.click(tag_on_click);
-		widget.append(tag);
-		tag_on_click.call(tag);
-		widget.append(newtag);
-		newtag.click(newtag_on_click);
-	    }
+	var newinput = $('<form><input type="text"/><input type="submit" value="Add"/><form>');
+	newinput.submit(function(event) {
+	    var tag = $('input[type="text"]', newinput).val();
+	    newinput.remove();
+	    tag = $('<li>' + tag + '</li>');
+	    tag.click(tag_on_click);
+	    widget.append(tag);
+	    tag_on_click.call(tag);
+	    widget.append(newtag);
+	    newtag.click(newtag_on_click);
+
 	});
 	widget.append(newinput);
     };
